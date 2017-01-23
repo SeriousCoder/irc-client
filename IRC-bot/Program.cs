@@ -10,15 +10,23 @@ namespace IRC_bot
 	{
 		static void Main(string[] args)
 		{
-			string server = "irc.freenode.org";
-			int port = 6667;
-			string nickname = "JohnnyDau";
-			string channel = "#spbnet";
+			try
+			{
+				string server = "irc.freenode.org";
+				int port = 6667;
+				string nickname = "Quore_bot";
+				string channel = "#spbnet";
 
 
-			var irc = new IRC(nickname, channel);
+				var irc = new IRC(nickname, channel);
 
-			irc.Connect(server, port);
+				irc.Connect(server, port);
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e);
+				Console.ReadKey();
+			}
 		}
 	}
 }

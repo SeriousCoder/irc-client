@@ -8,7 +8,7 @@ namespace IRC_bot
 	public class Quote
 	{
 		public string quoteText;
-		private string quoteAutor;
+		public string quoteAuthor;
 		private string senderName;
 		private string senderLink;
 	}
@@ -34,7 +34,7 @@ namespace IRC_bot
 			reader.Close();
 			response.Close();
 
-			return quote.quoteText;
+			return quote.quoteText + " (" + quote.quoteAuthor + ")";
 		}
 	}
 }
